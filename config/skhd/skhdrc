@@ -1,0 +1,9 @@
+cmd + ctrl - y : open -na /Applications/iTerm.app
+cmd + ctrl - t : open /Applications/iTerm.app
+cmd + ctrl - h : open -na /Applications/Google\ Chrome.app
+cmd + ctrl - g : open /Applications/Google\ Chrome.app
+
+cmd - left: yabai -m window --focus prev
+cmd - right: yabai -m window --focus next
+cmd - x : yabai -m window --close
+cmd - m : yabai -m window --minimize
