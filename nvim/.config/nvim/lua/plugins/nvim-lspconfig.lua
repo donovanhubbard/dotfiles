@@ -2,7 +2,6 @@ return {
   "neovim/nvim-lspconfig",
   priority = 53,
   config = function()
-    require("neodev").setup({})
     local lspconfig = require('lspconfig')
 
     -- lspconfig.gopls.setup {
@@ -36,15 +35,22 @@ return {
     --     },
     --   },
     -- }
-    lspconfig.lua_ls.setup {
-      settings = {
-        Lua = {
-          completion = {
-            callSnippet = "Replace"
-          }
-        }
-      }
-    }
+    -- lspconfig.lua_ls.setup {
+    --   settings = {
+    --     Lua = {
+    --       diagnostics = {
+    --         globals = {
+    --           'vim',
+    --           'describe',
+    --           'it',
+    --         },
+    --       },
+    --       -- completion = {
+    --       --   callSnippet = "Replace"
+    --       -- },
+    --     },
+    --   },
+    -- }
     lspconfig.rust_analyzer.setup {}
   end,
   lazy = false

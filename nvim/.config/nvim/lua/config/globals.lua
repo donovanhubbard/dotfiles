@@ -3,5 +3,3 @@ P = function(v)
   return v
 end
 
-vim.api.nvim_create_user_command("FOO", 'echo "Hello world!"', {bang = true})
-
