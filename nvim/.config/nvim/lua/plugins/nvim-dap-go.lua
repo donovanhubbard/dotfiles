@@ -1,6 +1,6 @@
 return {
   "leoluz/nvim-dap-go",
-  lazy = false,
+  ft = "go",
   keys = {
     vim.keymap.set("n", "<leader>bc", "<cmd>lua require('dap').continue()<CR>"),
     vim.keymap.set("n", "<leader>bs", "<cmd>lua require('dap').close()<CR>"),

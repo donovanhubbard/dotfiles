@@ -15,6 +15,8 @@ require('config.globals')
 require('config.options')
 require('config.keymaps')
 require('config.rust')
+require('config.go')
+require('config.makefile')
 
 local opts = {
 	defaults = {

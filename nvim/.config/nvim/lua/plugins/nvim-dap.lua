@@ -1,4 +1,4 @@
 return {
   "mfussenegger/nvim-dap",
-  lazy = false,
+  ft = "go"
 }

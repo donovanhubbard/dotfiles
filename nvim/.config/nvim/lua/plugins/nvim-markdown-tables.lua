@@ -2,7 +2,7 @@ return {
   "donovanhubbard/markdown-tables.nvim",
   dir = "/Users/donovan/code/markdown-tables.nvim",
   name = "markdown-tables.nvim",
-  lazy = false,
+  ft = "markdown",
   priority = 5500,
   dev = {true},
   config = function ()

@@ -68,7 +68,7 @@ return {
       -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
       require('lspconfig')['lua_ls'].setup { capabilities = capabilities }
       require('lspconfig')['gopls'].setup { capabilities = capabilities }
-      require('lspconfig')['tsserver'].setup { capabilities = capabilities }
+      require('lspconfig')['ts_ls'].setup { capabilities = capabilities }
     end
   }
 }

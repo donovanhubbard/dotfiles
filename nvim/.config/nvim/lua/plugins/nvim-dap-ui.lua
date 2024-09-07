@@ -1,6 +1,6 @@
 return {
   "rcarriga/nvim-dap-ui",
-  lazy = false,
+  ft = "go",
   config = function()
     require("dapui").setup()
 
