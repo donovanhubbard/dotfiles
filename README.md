@@ -6,6 +6,20 @@ Designed for use with GNU stow.
 
 ## Install
 
+Clone this repo to wherever you keep source code.
+
+Then for each app you want to use, symlink it to the appropriate folder.
+
+Most folders belong to the `.config` file. The exception is tmux which goes to ~/.tmux.conf
+
+For example, to install nvim use:
+
+```
+ln -s ~/.config/nvim ~/dotfiles/nvim
+```
+
+# Deprecated Stow Instructions
+
 First get GNU stow installed.
 
 ```
