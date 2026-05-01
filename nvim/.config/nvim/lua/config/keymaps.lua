@@ -29,3 +29,5 @@ vim.keymap.set('n', '<leader>ww', increaseWidth)
 vim.keymap.set('n', '<leader>wn', decreaseWidth)
 vim.keymap.set('n', '<leader>wt', increaseHeight)
 vim.keymap.set('n', '<leader>ws', decreaseHeight)
+
+vim.keymap.set("n", "<leader>e", function() vim.diagnostic.open_float(nil, { focusable = true }) end)

@@ -20,7 +20,7 @@ return {
     --     },
     --   },
     -- }
-    lspconfig.gopls.setup {}
+    lspconfig.gopls.setup ({})
     -- lspconfig.gopls.setup {
       -- cmd = { "gopls" },
     --   filetypes = { "go", "gomod", "gowork", "gotmpl" },
@@ -52,6 +52,8 @@ return {
     --   },
     -- }
     lspconfig.rust_analyzer.setup {}
+
+    lspconfig.pyright.setup {}
   end,
   lazy = false
 }
