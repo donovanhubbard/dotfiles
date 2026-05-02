@@ -2,7 +2,10 @@ return {
   "neovim/nvim-lspconfig",
   priority = 53,
   config = function()
-    local lspconfig = require('lspconfig')
+    vim.lsp.config("gopls",{})
+    vim.lsp.enable("gopls")
+    -- vim.lsp.config.rust_analyzer.setup({})
+    -- vim.lsp.config.pyright.setup({})
 
     -- lspconfig.gopls.setup {
     --   on_attach = on_attach,
@@ -20,7 +23,7 @@ return {
     --     },
     --   },
     -- }
-    lspconfig.gopls.setup ({})
+    -- lspconfig.gopls.setup ({})
     -- lspconfig.gopls.setup {
       -- cmd = { "gopls" },
     --   filetypes = { "go", "gomod", "gowork", "gotmpl" },
@@ -51,9 +54,8 @@ return {
     --     },
     --   },
     -- }
-    lspconfig.rust_analyzer.setup {}
-
-    lspconfig.pyright.setup {}
+    -- lspconfig.rust_analyzer.setup {}
+    -- lspconfig.pyright.setup {}
   end,
   lazy = false
 }
