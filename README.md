@@ -15,7 +15,7 @@ Most folders belong to the `.config` file. The exception is tmux which goes to ~
 For example, to install nvim use:
 
 ```
-ln -s ~/.config/nvim ~/dotfiles/nvim
+ln -s ~/dotfiles/nvim ~/.config/nvim 
 ```
 
 # Deprecated Stow Instructions
