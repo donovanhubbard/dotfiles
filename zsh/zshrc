@@ -1,0 +1,32 @@
+#!/usr/bin/env zsh
+export EDITOR=/opt/homebrew/bin/nvim
+
+export PATH=$PATH:/opt/homebrew/bin
+
+export LSCOLORS=exfxcxdxbxegedabagacad
+export CLICOLOR=1
+alias ls='ls -G'
+
+set_vcs_prompt(){
+  vcs_info
+
+  is_git=$(git rev-parse --is-inside-work-tree 2>/dev/null)
+  if [[ "$is_git" == "true" ]]; then
+    vcs_prompt="%F{green}(${vcs_info_msg_0_})%f "
+  else
+    vcs_prompt=""
+  fi
+}
+
+autoload -Uz add-zsh-hook
+autoload -Uz vcs_info
+
+add-zsh-hook precmd set_vcs_prompt
+
+zstyle ':vcs_info:git:*' formats '%b'
+# allow more than one 'vcs_info_msg_X_' string as defined by the formats style
+zstyle ':vcs_info:*' max-exports 3
+
+setopt PROMPT_SUBST
+PROMPT='%F{cyan}%~%f $vcs_prompt%# '
+
