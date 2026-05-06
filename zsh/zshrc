@@ -1,12 +1,24 @@
 #!/usr/bin/env zsh
 export EDITOR=/opt/homebrew/bin/nvim
 export PATH=$PATH:/opt/homebrew/bin
+DOTFILE_PATH=~/code/dotfiles
+ZSH_FOLDER_PATH="$DOTFILE_PATH/zsh"
 
-fpath=( ~/code/dotfiles/zsh/functions "${fpath[@]}" )
+# Turn on auto-completions
+zstyle ':completion:*:*:git:*' script "$ZSH_FOLDER_PATH/git-completion.bash"
 
+fpath=( "$ZSH_FOLDER_PATH/functions" "${fpath[@]}" )
+fpath=( "$ZSH_FOLDER_PATH/completions" $fpath)
+
+autoload -Uz compinit && compinit
+
+
+# turn on colors for ls command
 export LSCOLORS=exfxcxdxbxegedabagacad
 export CLICOLOR=1
 alias ls='ls -G'
+
+# Setup up your prompt
 
 set_vcs_prompt(){
   vcs_info
