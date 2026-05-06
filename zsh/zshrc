@@ -17,6 +17,8 @@ fpath=( "$ZSH_FOLDER_PATH/completions" $fpath)
 
 autoload -Uz compinit && compinit
 
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # turn on colors for ls command
 export LSCOLORS=exfxcxdxbxegedabagacad
