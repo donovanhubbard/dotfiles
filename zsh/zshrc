@@ -5,8 +5,6 @@ DOTFILE_PATH=~/code/dotfiles
 ZSH_FOLDER_PATH="$DOTFILE_PATH/zsh"
 
 # Turn on auto-completions
-zstyle ':completion:*:*:git:*' script "$ZSH_FOLDER_PATH/git-completion.bash"
-
 fpath=( "$ZSH_FOLDER_PATH/functions" "${fpath[@]}" )
 fpath=( "$ZSH_FOLDER_PATH/completions" $fpath)
 
