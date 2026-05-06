@@ -1,0 +1,17 @@
+
+read_cisco(){
+  ROOT_DIR=${XDG_STATE_HOME:-$HOME/.local/state}
+  CSCO_DIR="$ROOT_DIR/csco"
+  PRICE_FILE="$CSCO_DIR/price.txt"
+
+  if [[ -f "$PRICE_FILE" ]]; then
+    PRICE=$(cat $PRICE_FILE)
+    DISPLAY="CSCO: $PRICE"
+  else
+    DISPLAY="CSCO: --"
+  fi
+
+  print $DISPLAY
+}
+
+read_cisco

@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 export EDITOR=/opt/homebrew/bin/nvim
-
 export PATH=$PATH:/opt/homebrew/bin
+
+fpath=( ~/code/dotfiles/zsh/functions "${fpath[@]}" )
 
 export LSCOLORS=exfxcxdxbxegedabagacad
 export CLICOLOR=1
@@ -18,6 +19,7 @@ set_vcs_prompt(){
   fi
 }
 
+
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
 
@@ -27,6 +29,14 @@ zstyle ':vcs_info:git:*' formats '%b'
 # allow more than one 'vcs_info_msg_X_' string as defined by the formats style
 zstyle ':vcs_info:*' max-exports 3
 
+autoload -Uz read_csco
+
+set_csco_prompt(){
+  CSCO=$(read_csco)
+}
+
+add-zsh-hook precmd set_csco_prompt
+
 setopt PROMPT_SUBST
-PROMPT='%F{cyan}%~%f $vcs_prompt%# '
+PROMPT='%F{cyan}%~%f %F{yellow}$CSCO%f $vcs_prompt%# '
 
