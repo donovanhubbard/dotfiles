@@ -7,7 +7,18 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 
+# no noise
+setopt NO_BEEP
+
+# History option
+
+export SAVHIST=1000 # on disk
+export HISTSIZE=1050 # in memory
+
 setopt SHARE_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+
+
 
 DOTFILE_PATH=~/code/dotfiles
 ZSH_FOLDER_PATH="$DOTFILE_PATH/zsh"
