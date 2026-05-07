@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 export EDITOR=/opt/homebrew/bin/nvim
 export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:~/.local/bin
 
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
