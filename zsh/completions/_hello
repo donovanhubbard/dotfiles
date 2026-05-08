@@ -1,0 +1,40 @@
+#compdef _hello hello
+
+function _hello {
+  local context state state_descr line
+  typeset -A opt_args
+  print "===============" >> ~/log.txt
+  print "context=$context" >> ~/log.txt
+  print "state=$state">> ~/log.txt
+  print "state_descr=$state_descr">> ~/log.txt
+  print "line=$line">> ~/log.txt
+
+  _arguments -C \
+      "-h[Show help information]" \
+      "--h[Show help information]" \
+      "1: :(quietly loudly)" \
+      "*::arg:->args"
+
+  case $line[1] in
+      loudly)
+          print "loud line:$line" >> ~/log.txt
+          print "loud:${line[1]}">> ~/log.txt
+          _hello_loudly
+      ;;
+      quietly)
+          print "quiet line:$line" >> ~/log.txt
+          print "quiet:${line[1]}">> ~/log.txt
+          _hello_quietly
+      ;;
+  esac
+}
+
+function _hello_quietly {
+    _arguments \
+        "--silent[Dont output anything]"
+}
+
+function _hello_loudly {
+    _arguments \
+        "--repeat=[Repat the <message> any number of times]"
+}
