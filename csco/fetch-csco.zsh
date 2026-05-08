@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-ROOT_DIR=${XDG_STATE_HOME:-$HOME/.local/state}
+ROOT_DIR=${XDG_CACHE_HOME:-$HOME/.cache}
 CSCO_DIR="$ROOT_DIR/csco"
 PRICE_FILE="$CSCO_DIR/price.txt"
 LOG_DIR="$CSCO_DIR/logs"
