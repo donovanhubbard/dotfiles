@@ -1,0 +1,14 @@
+badEntry: {}
+dotfiles:
+  - symlinkTarget: nvim
+    symlinkPath: ~/.config/nvim
+  - symlinkPath: ~/.tmux.conf
+    symlinkTarget: tmux/tmux.conf
+  - symlinkTarget: "kitty"
+    symlinkPath: "~/.config/kitty"
+  - symlinkPath: bad
+  - symlinkTarget: alsoBad
+anotherBadEntry: yes
+dotfiles:
+  - symlinkTarget: garbage
+    symlinkPath: /dev/null

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if [[ "$#" -eq 0 ]]; then
+  CONFIG_FILE=dotfiles.yaml
+elif [[ "$#" -eq 1 ]]; then
+  CONFIG_FILE=$1
+else
+  echo "$0: usage"
+  exit
+fi
+
+HEADER_ENTERED="false"
+HEADER_PASSED="false"
+HEADER="dotfiles:"
+
+
+while IFS= read -r line; do
+  echo "================" >&2
+  echo "=> '$line'" >&2
+  if [[ "$HEADER_ENTERED" == "true" ]]; then
+    if [[ "$HEADER_PASSED" == "false" ]]; then
+      if [[ "$line" =~ ^[[:blank:]][[:blank:]].*$ ]]; then
+        echo "$line"
+      else
+        HEADER_PASSED="true"
+      fi
+    fi
+  elif [[ "$line" == "$HEADER" ]]; then
+    HEADER_ENTERED="true"
+  fi
+done < "$CONFIG_FILE"
+
