@@ -6,7 +6,7 @@ vim.g.maplocalleader = " "
 -- keymap.set("n","<leader>m",":NvimTreeFocus<CR>", { noremap = true, silent = true })
 -- keymap.set("n","<leader>f",":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
-local increment = 8
+local increment = 10
 
 local function increaseWidth()
   local current = vim.api.nvim_win_get_width(0)
