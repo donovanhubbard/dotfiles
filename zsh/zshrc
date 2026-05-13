@@ -90,5 +90,6 @@ alias reload="source ~/code/dotfiles/zsh/zshrc"
 alias zedit="nvim ~/code/dotfiles/zsh/zshrc"
 alias tedit="nvim ~/code/dotfiles/tmux/tmux.conf"
 alias vim=nvim
+alias setup-socket="sudo bash ~/code/streamux/setup-socket.sh"
 alias start-streaming="bash ~/code/streamux/start-streaming.sh"
 
