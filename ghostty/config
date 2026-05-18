@@ -1,0 +1,9 @@
+theme = tokyonight
+font-thicken = true
+
+# custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
+custom-shader = ~/.config/ghostty/shaders/sonic_boom_cursor.glsl
+# custom-shader = ~/.config/ghostty/shaders/glitchy.glsl
+# custom-shader = ~/.config/ghostty/shaders/drunkard.glsl
+
