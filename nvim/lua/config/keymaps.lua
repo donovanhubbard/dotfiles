@@ -31,3 +31,5 @@ vim.keymap.set('n', '<leader>wt', increaseHeight)
 vim.keymap.set('n', '<leader>ws', decreaseHeight)
 
 vim.keymap.set("n", "<leader>e", function() vim.diagnostic.open_float(nil, { focusable = true }) end)
+
+vim.keymap.set("n", "<leader>cc", "<cmd>:Lexplore<cr>")
