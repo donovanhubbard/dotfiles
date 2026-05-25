@@ -11,7 +11,4 @@ return {
   keys = {
     vim.keymap.set("v", "<leader>ft", ":FormatTable<CR>"),
   },
-  dependencies = {
-    "nvim-lua/plenary.nvim"
-  },
 }
