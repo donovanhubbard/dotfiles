@@ -1,8 +1,11 @@
 return {
   "neovim/nvim-lspconfig",
-  priority = 53,
+  priority = 153,
   config = function()
-    vim.lsp.config("gopls",{})
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    vim.lsp.config("gopls",{
+      capabilities = capabilities,
+    })
     vim.lsp.enable("gopls")
     -- vim.lsp.config.rust_analyzer.setup({})
     -- vim.lsp.config.pyright.setup({})
