@@ -20,6 +20,7 @@ require('config.options')
 require('config.keymaps')
 require('config.makefile')
 require('config.autocmds')
+require('config.highlighting')
 
 local opts = {
 	defaults = {
