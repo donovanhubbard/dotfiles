@@ -10,7 +10,7 @@ vim.api.nvim_set_hl(0, "URL", {
 
 local custom_highlighting_group = vim.api.nvim_create_augroup("CustomHighlighting", { clear = true })
 
-vim.api.nvim_create_autocmd({'BufRead','BufNewFile'}, {
+vim.api.nvim_create_autocmd({'BufRead','BufNewFile', 'WinNew'}, {
   group = custom_highlighting_group,
   pattern = "*.md",
   callback = function()
@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd({'BufRead','BufNewFile'}, {
   end
 })
 
-vim.api.nvim_create_autocmd({'BufRead','BufNewFile'}, {
+vim.api.nvim_create_autocmd({'BufRead','BufNewFile', 'WinNew'}, {
   group = custom_highlighting_group,
   pattern = "*.md",
   callback = function()
