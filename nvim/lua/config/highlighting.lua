@@ -15,13 +15,6 @@ vim.api.nvim_create_autocmd({'BufRead','BufNewFile', 'WinNew'}, {
   pattern = "*.md",
   callback = function()
     vim.fn.matchadd('URL', 'https://\\S\\+')
-  end
-})
-
-vim.api.nvim_create_autocmd({'BufRead','BufNewFile', 'WinNew'}, {
-  group = custom_highlighting_group,
-  pattern = "*.md",
-  callback = function()
     vim.fn.matchadd('MarkdownHeading', '^#.*$')
   end
 })
