@@ -1,12 +1,10 @@
 return {
-  "donovanhubbard/markdown-links.nvim",
-  dir = "/Users/donovan/code/markdown-links.nvim",
+  "https://plugins.svenxix.net/donovanhubbard/markdown-links.nvim.git",
   name = "markdown-links.nvim",
   ft = "markdown",
   priority = 5501,
-  dev = {true},
   keys = {
-    vim.keymap.set("n", "<CR>", ":FollowLink<CR>", {silent=true}),
-    vim.keymap.set("n", "<BS>", ":BackLink<CR>", {silent=true}),
+    { "<CR>", ":FollowLink<CR>", mode = "n", silent = true },
+    { "<BS>", ":BackLink<CR>", mode = "n", silent = true },
   }
 }

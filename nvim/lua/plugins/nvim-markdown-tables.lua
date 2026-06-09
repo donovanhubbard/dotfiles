@@ -9,8 +9,8 @@ return {
     require('markdown-tables')
   end,
   keys = {
-    vim.keymap.set("v", "<leader>cm", ":CreateMarkdownTable<CR>"),
-    vim.keymap.set("v", "<leader>ct", ":CreateTSVTable<CR>"),
-    vim.keymap.set("v", "<leader>cc", ":CreateCSVTable<CR>"),
+    {"<leader>tm", ":CreateMarkdownTable<CR>", mode = "v", silent = true},
+    {"<leader>tt", ":CreateTSVTable<CR>", mode = "v", silent = true},
+    {"<leader>tc", ":CreateCSVTable<CR>", mode = "v", silent = true},
   },
 }
