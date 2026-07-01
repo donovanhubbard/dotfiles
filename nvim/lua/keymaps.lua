@@ -33,3 +33,8 @@ vim.keymap.set('n', '<leader>ws', decreaseHeight)
 vim.keymap.set("n", "<leader>e", function() vim.diagnostic.open_float(nil, { focusable = true }) end)
 
 vim.keymap.set("n", "<leader>cc", "<cmd>:Lexplore<cr>")
+
+-- telescope
+vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>')
+vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>')
