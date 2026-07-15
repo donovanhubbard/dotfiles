@@ -56,6 +56,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     vim.api.nvim_buf_set_keymap(0, 'n', '<CR>', ':FollowLink<CR>', {silent=true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<BS>', ':BackLink<CR>', {silent=true})
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>h', ':FollowLinkSplit<CR>', {silent=true})
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>v', ':FollowLinkVSplit<CR>', {silent=true})
     vim.api.nvim_buf_set_keymap(0, 'v', '<leader>tm', ':CreateMarkdownTable<CR>', {silent=true})
     vim.api.nvim_buf_set_keymap(0, 'v', '<leader>tt', ':CreateTSVTable<CR>', {silent=true})
     vim.api.nvim_buf_set_keymap(0, 'v', '<leader>tc', ':CreateCSVTable<CR>', {silent=true})

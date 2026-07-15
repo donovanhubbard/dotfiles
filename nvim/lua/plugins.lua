@@ -7,14 +7,16 @@ vim.pack.add({
   "https://github.com/hrsh7th/cmp-nvim-lsp",
   "https://github.com/hrsh7th/cmp-cmdline",
   "https://github.com/hrsh7th/nvim-cmp",
-  "https://plugins.svenxix.net/donovanhubbard/markdown-links.nvim.git",
   "https://github.com/donovanhubbard/markdown-tables.nvim",
   "https://github.com/fatih/vim-go",
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
   "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/nvim-mini/mini.test",
+  "https://github.com/nvim-mini/mini.files",
 })
+
+vim.opt.rtp:append('/Users/donovan/code/markdown-links.nvim')
 
 require("mason").setup()
 require("mason-lspconfig").setup {
@@ -104,4 +106,6 @@ vim.g.go_highlight_variable_declarations = 1
 vim.g.go_highlight_variable_assignments = 1
 vim.g.go_highlight_diagnostic_errors = 1
 vim.g.go_highlight_diagnostic_warnings = 1
+
+require('mini.files').setup()
 
